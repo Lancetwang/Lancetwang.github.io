@@ -203,6 +203,13 @@ section {
   line-height: 1.35;
 }
 
+.entry-subtitle {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
 .entry-tag {
   margin-top: 5px;
   color: var(--accent);

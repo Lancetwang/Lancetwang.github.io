@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="王凯 — LLM applications, self-evolving agents, and post-training."
+      content="王凯 — knowledge-augmented LLM applications, agent systems, and self-evolving agents."
     />
     <title>王凯 | LLM Agent Researcher</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,15 +23,15 @@
           <a class="nav-name" href="#top">王凯</a>
           <div class="nav-menu">
             <a href="#about">About</a>
-            <a href="#work">Work</a>
+            <a href="#research">Research</a>
           </div>
         </nav>
 
         <div class="contact-bar" id="top">
           <span><span aria-hidden="true">📍</span> China</span>
-          <span>USTC-SE</span>
+          <span>USTC · Software Engineering</span>
           <a href="https://github.com/Lancetwang">GitHub</a>
-          <a href="https://github.com/Lancetwang?tab=repositories">Open Source</a>
+          <a href="https://github.com/Lancetwang/car">CAR</a>
         </div>
       </header>
 
@@ -40,40 +40,121 @@
           <h1 class="section-heading">Introduction</h1>
           <div class="introduction">
             <p>
-              I focus on LLM applications, self-evolving agents, and
-              post-training. My work explores how capable agents can use tools,
-              learn from experience, and remain simple enough to understand and
-              improve.
+              I work on knowledge-augmented LLM applications, agent systems,
+              and self-evolving agents. I focus on connecting language models
+              with external knowledge and tools, then improving long-horizon
+              execution through reflection, supervision, and replanning.
             </p>
 
             <div class="focus-grid">
               <article>
-                <strong>LLM Applications</strong>
+                <strong>Knowledge-Augmented LLMs</strong>
                 <p>
-                  Building practical systems that turn language models into
-                  useful tools for real tasks.
+                  Grounding language models in external knowledge for
+                  professional and real-world applications.
+                </p>
+              </article>
+              <article>
+                <strong>Agent Systems</strong>
+                <p>
+                  Designing runtimes, workflows, and multi-agent systems for
+                  reliable tool use and task execution.
                 </p>
               </article>
               <article>
                 <strong>Self-Evolving Agents</strong>
                 <p>
-                  Exploring agents that synthesize tools, correct trajectories,
-                  and improve through interaction.
-                </p>
-              </article>
-              <article>
-                <strong>Post-Training</strong>
-                <p>
-                  Studying training and feedback methods that make agent
-                  behavior more capable and reliable.
+                  Improving agents through tool synthesis, trajectory
+                  rectification, harness training, and adaptive replanning.
                 </p>
               </article>
             </div>
           </div>
         </section>
 
-        <section id="work">
-          <h2 class="section-heading">Selected Work</h2>
+        <section>
+          <h2 class="section-heading">Education</h2>
+          <ul class="entry-list">
+            <li class="entry">
+              <div class="entry-meta">2024 — 2027</div>
+              <div class="entry-main">
+                <div class="entry-title">M.Eng. in Software Engineering</div>
+                <div class="entry-subtitle">
+                  University of Science and Technology of China
+                </div>
+                <p>
+                  Overall academic ranking: top 1.8%.
+                </p>
+              </div>
+            </li>
+            <li class="entry">
+              <div class="entry-meta">2020 — 2024</div>
+              <div class="entry-main">
+                <div class="entry-title">B.Eng. in Software Engineering</div>
+                <div class="entry-subtitle">Xi'an Jiaotong University</div>
+                <p>
+                  Overall academic ranking: top 20%; recommended for graduate
+                  admission to USTC.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="section-heading">Industry Experience</h2>
+          <ul class="entry-list">
+            <li class="entry">
+              <div class="entry-meta">Jun 2026 — Present</div>
+              <div class="entry-main">
+                <div class="entry-title">Research Intern</div>
+                <div class="entry-subtitle">
+                  Tencent · TEG · Intelligent Algorithms
+                </div>
+                <p>
+                  Developed MetaAgent, an adaptive meta-agent trained through
+                  harness engineering. Supervised tuning of AGENTS.md, skills,
+                  and system prompts improved SearchQA and OfficeQA performance
+                  while retaining cross-task few-shot generalization.
+                </p>
+              </div>
+            </li>
+            <li class="entry">
+              <div class="entry-meta">Feb — May 2026</div>
+              <div class="entry-main">
+                <div class="entry-title">Algorithm Intern</div>
+                <div class="entry-subtitle">
+                  ByteDance · TikTok Music Computing
+                </div>
+                <p>
+                  Trained Qwen3-Reranker-4B models for trending-topic
+                  deduplication and content-to-topic matching. Improved
+                  precision from 72% to 88%, recall from 87% to 93%, and reduced
+                  end-to-end batch latency from 10s to under 6s.
+                </p>
+              </div>
+            </li>
+            <li class="entry">
+              <div class="entry-meta">Apr — Sep 2025</div>
+              <div class="entry-main">
+                <div class="entry-title">Engineering Intern</div>
+                <div class="entry-subtitle">
+                  Intel Asia-Pacific R&amp;D · Flex
+                </div>
+                <p>
+                  Simplified EduLamp from a multi-agent architecture to a
+                  single agent with agents-as-tools, reducing first-token
+                  latency from 5s to under 2s. Introduced MCP-based plugins for
+                  vision, audio, and action capabilities; the project won first
+                  prize in Intel's internal AIPC track.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section id="research">
+          <h2 class="section-heading">Publications &amp; Research</h2>
           <ul class="entry-list">
             <li class="entry">
               <div class="entry-meta">2026</div>
@@ -82,82 +163,62 @@
                   class="entry-title"
                   href="https://github.com/Lancetwang/car"
                 >
-                  CAR
+                  CAR: Empowering Agents with Dynamic Tool Synthesis and Global
+                  Trajectory Rectification
                 </a>
+                <div class="entry-subtitle">
+                  First Author · Findings of ACL 2026
+                </div>
                 <p>
-                  Code and data for an ACL 2026 Findings paper on dynamic tool
-                  synthesis and trajectory rectification for LLM agents.
+                  Introduces Create And Replan, enabling agents to synthesize
+                  executable tools on demand and diagnose root causes before
+                  global replanning. CAR improves state-of-the-art performance
+                  on ToolHop by 6.6%.
                 </p>
-                <div class="entry-tag">Research · LLM Agents</div>
+                <div class="entry-tag">
+                  <a href="https://github.com/Lancetwang/car">[Code &amp; Data]</a>
+                </div>
               </div>
             </li>
             <li class="entry">
-              <div class="entry-meta">2026</div>
-              <div class="entry-main">
-                <a
-                  class="entry-title"
-                  href="https://github.com/Lancetwang/agent-core-runtime"
-                >
-                  Agent Core Runtime
-                </a>
-                <p>
-                  A lightweight node-flow runtime for building tool-using
-                  agents.
-                </p>
-                <div class="entry-tag">Open Source · Agent Infrastructure</div>
-              </div>
-            </li>
-            <li class="entry">
-              <div class="entry-meta">2026</div>
-              <div class="entry-main">
-                <a
-                  class="entry-title"
-                  href="https://github.com/Lancetwang/friday"
-                >
-                  Friday
-                </a>
-                <p>
-                  A personal command-line agent built on Agent Core Runtime.
-                </p>
-                <div class="entry-tag">CLI · Personal Agent</div>
-              </div>
-            </li>
-            <li class="entry">
-              <div class="entry-meta">2026</div>
+              <div class="entry-meta">2025</div>
               <div class="entry-main">
                 <a
                   class="entry-title"
                   href="https://github.com/Lancetwang/ft-agent"
                 >
-                  FT Agent
+                  FT-Agent: A Knowledge-Augmented Agent System for
+                  Fischer–Tropsch Catalyst Research
                 </a>
+                <div class="entry-subtitle">
+                  Independent Author · National Patent
+                </div>
                 <p>
-                  A lightweight node-flow agent framework and
-                  Fischer–Tropsch catalyst research pipeline.
+                  A Router–Planner–Writer–Supervisor system backed by a
+                  knowledge base of more than 8,000 papers. The system forms a
+                  plan–write–review–revise loop and has been piloted internally
+                  at China Energy.
                 </p>
-                <div class="entry-tag">Agents · Scientific Research</div>
+                <div class="entry-tag">
+                  <a href="https://github.com/Lancetwang/ft-agent">[Code]</a>
+                </div>
               </div>
             </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="section-heading">Open Source</h2>
-          <ul class="entry-list">
             <li class="entry">
-              <div class="entry-meta">2026</div>
+              <div class="entry-meta">2024 — 2025</div>
               <div class="entry-main">
-                <a
-                  class="entry-title"
-                  href="https://github.com/Lancetwang/china-mainland-calendar"
-                >
-                  China Mainland Calendar
-                </a>
+                <div class="entry-title">
+                  Drawing Informative Gradients from Sources: A One-stage
+                  Transfer Learning Framework for Cross-city Spatiotemporal
+                  Forecasting
+                </div>
+                <div class="entry-subtitle">Research Project</div>
                 <p>
-                  An iCalendar subscription for mainland China holidays,
-                  adjusted workdays, and common observances.
+                  Implemented and evaluated Target-Skewed Backward training,
+                  filtering negative transfer through gradient decomposition.
+                  Across four real-world traffic datasets, the method improved
+                  mean MAE by 4.14% over the strongest baseline.
                 </p>
-                <div class="entry-tag">Utility · Calendar</div>
               </div>
             </li>
           </ul>
@@ -165,15 +226,23 @@
 
         <div class="compact-grid">
           <section>
-            <h2>Research Interests</h2>
+            <h2>Awards</h2>
             <ul>
               <li>
-                Agent learning and adaptation
-                <span>Experience, feedback, and self-improvement</span>
+                3rd Place, AI Agent Competition
+                <span>Deep Modeling × Suzhou AI Lab · 2025</span>
               </li>
               <li>
-                Tool-using language models
-                <span>Planning, synthesis, and reliable execution</span>
+                Third Prize, Huawei Software Elite Challenge
+                <span>2025</span>
+              </li>
+              <li>
+                Provincial Second Prize, Lanqiao Cup
+                <span>2023</span>
+              </li>
+              <li>
+                Third Prize, National English Competition for College Students
+                <span>2022</span>
               </li>
             </ul>
           </section>
@@ -187,6 +256,16 @@
               <li>
                 <a href="https://github.com/Lancetwang/car">CAR project</a>
                 <span>Paper code and data</span>
+              </li>
+              <li>
+                <a href="https://github.com/Lancetwang/agent-core-runtime">
+                  Agent Core Runtime
+                </a>
+                <span>Lightweight runtime for tool-using agents</span>
+              </li>
+              <li>
+                <a href="https://github.com/Lancetwang/friday">Friday Agent</a>
+                <span>Personal CLI agent</span>
               </li>
             </ul>
           </section>
