@@ -185,6 +185,20 @@ section {
   text-align: right;
 }
 
+.company-logo {
+  display: block;
+  width: 108px;
+  max-height: 34px;
+  margin: 12px 0 0 auto;
+  object-fit: contain;
+  object-position: right center;
+  opacity: 0.88;
+}
+
+.company-logo-intel {
+  width: 62px;
+}
+
 .entry-main {
   padding-bottom: 16px;
   border-bottom: 1px solid var(--rule);
@@ -322,6 +336,17 @@ footer {
   .entry-meta {
     font-size: 0.82rem;
     text-align: left;
+  }
+
+  .company-logo {
+    width: 96px;
+    max-height: 28px;
+    margin: 8px 0 0;
+    object-position: left center;
+  }
+
+  .company-logo-intel {
+    width: 54px;
   }
 }
 
