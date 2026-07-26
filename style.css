@@ -217,6 +217,19 @@ section {
   font-weight: 700;
 }
 
+.entry-links {
+  margin-top: 5px;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.entry-links a {
+  margin-right: 12px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .compact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
