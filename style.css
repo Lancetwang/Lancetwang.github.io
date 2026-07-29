@@ -179,7 +179,6 @@ nav {
 }
 
 .hero-lede {
-  max-width: 42rem;
   margin: 26px 0 0;
   color: var(--body);
   font-size: 1.1rem;
@@ -272,24 +271,25 @@ section {
 --------------------------------------------------------------------------- */
 .focus-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
+  grid-template-columns: 1fr;
 }
 
 .focus-grid article {
-  padding-top: 14px;
-  border-top: 1px solid var(--line-strong);
-  transition: border-color 0.3s ease;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--line);
 }
 
-.focus-grid article:hover {
-  border-top-color: var(--accent);
+.focus-grid article:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
 }
 
 .focus-grid strong {
   display: block;
-  margin-bottom: 6px;
-  font-size: 0.95rem;
+  margin-bottom: 4px;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.35;
 }
@@ -511,16 +511,8 @@ footer {
     margin-top: 46px;
   }
 
-  .focus-grid,
   .compact-grid {
     grid-template-columns: 1fr;
-  }
-
-  .focus-grid {
-    gap: 16px;
-  }
-
-  .compact-grid {
     gap: 32px;
   }
 
