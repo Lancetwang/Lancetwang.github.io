@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="KAI WANG — knowledge-augmented LLM applications, agent systems, and self-evolving agents."
+      content="Kai Wang — knowledge-augmented LLM applications, agent systems, and self-evolving agents."
     />
-    <title>KAI WANG | LLM Agent Researcher</title>
+    <meta property="og:title" content="Kai Wang — LLM Agent Researcher" />
+    <meta
+      property="og:description"
+      content="Knowledge-augmented LLM applications, agent systems, and self-evolving agents."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/80518792?v=4"
+    />
+    <meta
+      name="theme-color"
+      content="#faf9f5"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#151513"
+      media="(prefers-color-scheme: dark)"
+    />
+    <title>Kai Wang — LLM Agent Researcher</title>
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
     <link
       rel="icon"
       type="image/png"
@@ -17,68 +48,102 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600&family=Playfair+Display:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
       <header>
         <nav aria-label="Primary navigation">
-          <a class="nav-name" href="#top">KAI WANG</a>
-          <div class="nav-menu">
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
+          <a class="nav-name" href="#top">Kai Wang</a>
+          <div class="nav-right">
+            <div class="nav-menu">
+              <a href="#about">About</a>
+              <a href="#research">Research</a>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle color theme"
+              title="Toggle color theme"
+            >
+              <svg
+                class="icon-moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg
+                class="icon-sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                />
+              </svg>
+            </button>
           </div>
         </nav>
 
-        <div class="contact-bar" id="top">
-          <span><span aria-hidden="true">📍</span> China</span>
-          <a href="mailto:zaizwk@gmail.com">
-            <span aria-hidden="true">✉</span> zaizwk@gmail.com
-          </a>
-          <a href="tel:+8618027042742">
-            <span aria-hidden="true">☎</span> 18027042742
-          </a>
-          <a href="https://github.com/Lancetwang">GitHub</a>
-        </div>
+        <section class="hero" id="about">
+          <h1 class="hero-name">Kai Wang</h1>
+          <p class="hero-role">LLM Agent Researcher</p>
+          <p class="hero-lede">
+            I work on knowledge-augmented LLM applications, agent systems, and
+            self-evolving agents — connecting language models with external
+            knowledge and tools, then improving long-horizon execution through
+            reflection, supervision, and replanning.
+          </p>
+          <ul class="hero-links" aria-label="Contact and profiles">
+            <li>China</li>
+            <li><a href="mailto:zaizwk@gmail.com">zaizwk@gmail.com</a></li>
+            <li><a href="tel:+8618027042742">+86 180 2704 2742</a></li>
+            <li><a href="https://github.com/Lancetwang">GitHub</a></li>
+          </ul>
+        </section>
       </header>
 
-      <main>
-        <section id="about">
-          <h1 class="section-heading">Introduction</h1>
-          <div class="introduction">
-            <p>
-              I work on knowledge-augmented LLM applications, agent systems,
-              and self-evolving agents. I focus on connecting language models
-              with external knowledge and tools, then improving long-horizon
-              execution through reflection, supervision, and replanning.
-            </p>
-
-            <div class="focus-grid">
-              <article>
-                <strong>Knowledge-Augmented LLMs</strong>
-                <p>
-                  Grounding language models in external knowledge for
-                  professional and real-world applications.
-                </p>
-              </article>
-              <article>
-                <strong>Agent Systems</strong>
-                <p>
-                  Designing runtimes, workflows, and multi-agent systems for
-                  reliable tool use and task execution.
-                </p>
-              </article>
-              <article>
-                <strong>Self-Evolving Agents</strong>
-                <p>
-                  Improving agents through tool synthesis, trajectory
-                  rectification, harness training, and adaptive replanning.
-                </p>
-              </article>
-            </div>
+      <main id="top">
+        <section>
+          <h2 class="section-heading">Research Interests</h2>
+          <div class="focus-grid">
+            <article>
+              <strong>Knowledge-Augmented LLMs</strong>
+              <p>
+                Grounding language models in external knowledge for
+                professional and real-world applications.
+              </p>
+            </article>
+            <article>
+              <strong>Agent Systems</strong>
+              <p>
+                Designing runtimes, workflows, and multi-agent systems for
+                reliable tool use and task execution.
+              </p>
+            </article>
+            <article>
+              <strong>Self-Evolving Agents</strong>
+              <p>
+                Improving agents through tool synthesis, trajectory
+                rectification, harness training, and adaptive replanning.
+              </p>
+            </article>
           </div>
         </section>
 
@@ -88,9 +153,7 @@
             <li class="entry">
               <div class="entry-meta">2024 — 2027</div>
               <div class="entry-main">
-                <div class="entry-title">
-                  Master Student in Software Engineering
-                </div>
+                <div class="entry-title">Master Student in Software Engineering</div>
                 <div class="entry-subtitle">
                   University of Science and Technology of China
                 </div>
@@ -100,9 +163,7 @@
             <li class="entry">
               <div class="entry-meta">2020 — 2024</div>
               <div class="entry-main">
-                <div class="entry-title">
-                  BS Student in Software Engineering
-                </div>
+                <div class="entry-title">BS Student in Software Engineering</div>
                 <div class="entry-subtitle">Xi'an Jiaotong University</div>
               </div>
             </li>
@@ -119,6 +180,8 @@
                   class="company-logo"
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Tencent_logo_2017.svg"
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="entry-main">
@@ -141,6 +204,8 @@
                   class="company-logo"
                   src="https://upload.wikimedia.org/wikipedia/commons/0/07/ByteDance_logo_English.svg"
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="entry-main">
@@ -163,13 +228,13 @@
                   class="company-logo company-logo-intel"
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Intel_logo_%282020%2C_dark_blue%29.svg"
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="entry-main">
                 <div class="entry-title">Engineering Intern</div>
-                <div class="entry-subtitle">
-                  Intel Asia-Pacific R&amp;D · Flex
-                </div>
+                <div class="entry-subtitle">Intel Asia-Pacific R&amp;D · Flex</div>
                 <p>
                   Simplified EduLamp from a multi-agent architecture to a
                   single agent with agents-as-tools, reducing first-token
@@ -192,17 +257,17 @@
                   class="entry-title"
                   href="https://aclanthology.org/2026.findings-acl.869/"
                 >
-                  CAR: Empowering Agents with Dynamic Tool Synthesis and Global
-                  Trajectory Rectification
+                  CAR: Empowering Agents with Dynamic Tool Synthesis and
+                  Global Trajectory Rectification
                 </a>
                 <div class="entry-subtitle">
                   Kai Wang, Xu Wang, Zhiyuan Fu, Yudong Zhang, Yang Wang
                 </div>
                 <div class="entry-tag">Findings of ACL 2026</div>
                 <div class="entry-links">
-                  <a href="https://aclanthology.org/2026.findings-acl.869.pdf">
-                    [Paper]
-                  </a>
+                  <a href="https://aclanthology.org/2026.findings-acl.869.pdf"
+                    >[Paper]</a
+                  >
                   <a href="https://github.com/Lancetwang/car">[Code]</a>
                 </div>
               </div>
@@ -247,9 +312,9 @@
                   Lightweight node-flow runtime for building tool-using agents.
                 </div>
                 <div class="entry-links">
-                  <a href="https://github.com/Lancetwang/agent-core-runtime">
-                    [GitHub]
-                  </a>
+                  <a href="https://github.com/Lancetwang/agent-core-runtime"
+                    >[GitHub]</a
+                  >
                 </div>
               </div>
             </li>
@@ -275,7 +340,7 @@
 
         <div class="compact-grid">
           <section>
-            <h2>Awards</h2>
+            <h2 class="section-heading">Awards</h2>
             <ul>
               <li>
                 First-Class Scholarship, University of Science and Technology
@@ -289,28 +354,29 @@
             </ul>
           </section>
           <section>
-            <h2>Links</h2>
+            <h2 class="section-heading">Links</h2>
             <ul>
               <li>
                 <a
                   href="https://di.ustc.edu.cn/_upload/tpl/16/ee/5870/template5870/main.htm"
+                  >USTC-DI Lab</a
                 >
-                  USTC-DI Lab
-                </a>
               </li>
               <li>
                 <a
                   href="https://space.bilibili.com/473193044?spm_id_from=333.1007.0.0"
+                  >Bilibili</a
                 >
-                  Bilibili
-                </a>
               </li>
             </ul>
           </section>
         </div>
       </main>
 
-      <footer>Last updated: July 2026 · © 2026 KAI WANG</footer>
+      <footer>
+        <span>© 2026 Kai Wang</span>
+        <span>Last updated: July 2026</span>
+      </footer>
     </div>
   </body>
 </html>
