@@ -170,9 +170,10 @@ nav {
   cursor: pointer;
 }
 
+/* Active language: color only — a persistent underline would crowd the
+   nav's hairline below with a second parallel line */
 .lang-group button[aria-pressed="true"] {
   color: var(--accent);
-  background-size: 100% 1px;
 }
 
 /* Theme toggle: bare icon, sits on the same line as the text nav */
