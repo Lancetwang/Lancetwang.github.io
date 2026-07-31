@@ -64,34 +64,11 @@
               <a href="#about" data-i18n="nav.about">About</a>
               <a href="#research" data-i18n="nav.research">Research</a>
             </div>
-            <div class="lang-switcher">
-              <button
-                class="lang-btn"
-                type="button"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                aria-label="Select language"
-              >
-                <span class="lang-current">EN</span>
-                <svg
-                  class="lang-caret"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-              <ul class="lang-menu" role="listbox" aria-label="Language" hidden>
-                <li role="option" data-lang="en" aria-selected="true">English</li>
-                <li role="option" data-lang="zh" aria-selected="false">中文</li>
-                <li role="option" data-lang="ja" aria-selected="false">日本語</li>
-                <li role="option" data-lang="ko" aria-selected="false">한국어</li>
-              </ul>
+            <div class="lang-group" role="group" aria-label="Language">
+              <button type="button" data-lang="en" aria-pressed="true">EN</button>
+              <button type="button" data-lang="zh" aria-pressed="false">中</button>
+              <button type="button" data-lang="ja" aria-pressed="false">日</button>
+              <button type="button" data-lang="ko" aria-pressed="false">한</button>
             </div>
             <button
               class="theme-toggle"
@@ -302,7 +279,7 @@
                 <div class="entry-subtitle">
                   Kai Wang, Xu Wang, Zhiyuan Fu, Yudong Zhang, Yang Wang
                 </div>
-                <div class="entry-tag">Findings of ACL 2026</div>
+                <div class="entry-tag">ACL 2026 [Findings]</div>
                 <div class="entry-links">
                   <a
                     href="https://aclanthology.org/2026.findings-acl.869.pdf"
@@ -330,9 +307,7 @@
                   Yudong Zhang, Xu Wang, Xuan Yu, Zhaoyang Sun, Kai Wang, Yang
                   Wang
                 </div>
-                <div class="entry-tag">
-                  AAAI 2025<span class="tag-oral">Oral</span>
-                </div>
+                <div class="entry-tag">AAAI 2025 [Oral]</div>
                 <div class="entry-links">
                   <a
                     href="https://doi.org/10.1609/aaai.v39i1.32102"

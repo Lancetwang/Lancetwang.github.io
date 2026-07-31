@@ -42,8 +42,7 @@ body {
   color: var(--ink);
   background: var(--bg);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "PingFang SC", "Hiragino Sans GB", "Yu Gothic", "Malgun Gothic",
-    "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    sans-serif;
   font-size: 16px;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
@@ -56,6 +55,37 @@ body {
 ::selection {
   color: var(--ink);
   background: var(--accent-soft);
+}
+
+/* Per-language CJK fonts: keep each script on its native heiti/gothic faces
+   instead of leaking across fallbacks (Yu Gothic lacks many simplified
+   Chinese glyphs, which caused broken rendering). */
+html[lang="zh-CN"] body {
+  font-family: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "微软雅黑", "SimHei", "Noto Sans SC", sans-serif;
+}
+
+html[lang="ja"] body {
+  font-family: "Inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", "YuGothic", "Meiryo", "Noto Sans JP", sans-serif;
+}
+
+html[lang="ko"] body {
+  font-family: "Inter", "Apple SD Gothic Neo", "Malgun Gothic",
+    "Noto Sans KR", sans-serif;
+}
+
+/* Wide tracking tuned for Latin caps looks scattered on CJK */
+html:not([lang="en"]) .section-heading {
+  letter-spacing: 0.12em;
+}
+
+html:not([lang="en"]) .hero-role {
+  letter-spacing: 0.1em;
+}
+
+html:not([lang="en"]) .nav-menu a {
+  letter-spacing: 0.06em;
 }
 
 a {
@@ -123,80 +153,40 @@ nav {
   text-transform: uppercase;
 }
 
-/* Language switcher */
-.lang-switcher {
-  position: relative;
+/* Language group: flat text buttons with the same underline motion as nav */
+.lang-group {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
 }
 
-.lang-btn {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 0;
+.lang-group button {
+  padding: 0 0 2px;
   color: var(--muted);
   font-family: inherit;
   font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   background: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1px;
   border: 0;
   cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.lang-btn:hover,
-.lang-btn[aria-expanded="true"] {
-  color: var(--accent);
-}
-
-.lang-caret {
-  width: 11px;
-  height: 11px;
-  transition: transform 0.25s ease;
-}
-
-.lang-btn[aria-expanded="true"] .lang-caret {
-  transform: rotate(180deg);
-}
-
-.lang-menu {
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
-  z-index: 20;
-  min-width: 128px;
-  margin: 0;
-  padding: 6px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: 0 10px 32px rgb(0 0 0 / 10%);
-  list-style: none;
-}
-
-[data-theme="dark"] .lang-menu {
-  box-shadow: 0 10px 32px rgb(0 0 0 / 45%);
-}
-
-.lang-menu li {
-  padding: 7px 12px;
-  color: var(--body);
-  font-size: 0.85rem;
-  border-radius: 6px;
-  cursor: pointer;
   transition:
-    background-color 0.15s ease,
-    color 0.15s ease;
+    background-size 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.2s ease;
 }
 
-.lang-menu li:hover {
+.lang-group button:hover {
   color: var(--accent);
-  background: var(--accent-soft);
+  background-size: 100% 1px;
 }
 
-.lang-menu li[aria-selected="true"] {
+.lang-group button[aria-pressed="true"] {
   color: var(--accent);
-  font-weight: 600;
+  background-size: 100% 1px;
 }
 
 /* Theme toggle */
@@ -474,19 +464,6 @@ a.entry-title:hover {
   color: var(--accent);
   font-size: 0.85rem;
   font-weight: 600;
-}
-
-.tag-oral {
-  display: inline-block;
-  margin-left: 9px;
-  padding: 1px 9px 2px;
-  background: var(--accent-soft);
-  border-radius: 999px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  vertical-align: 1px;
 }
 
 .entry-links {

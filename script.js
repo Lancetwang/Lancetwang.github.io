@@ -48,7 +48,6 @@
   }
 
   // --- Language switching -----------------------------------------------------
-  var LANG_LABELS = { en: "EN", zh: "中", ja: "日", ko: "한" };
   var HTML_LANGS = { en: "en", zh: "zh-CN", ja: "ja", ko: "ko" };
 
   var I18N = {
@@ -83,17 +82,17 @@
       "edu.1.advisor": "导师：Xu Wang 研究员、Yang Wang 教授",
       "edu.2.title": "软件工程 学士",
       "edu.2.org": "西安交通大学",
-      "exp.1.meta": "2026 年 6 月 — 至今",
+      "exp.1.meta": "2026.6 — 至今",
       "exp.1.title": "研究实习生",
       "exp.1.org": "腾讯 · TEG · 智能算法",
       "exp.1.desc":
         "提出 MetaAgent，为跨多样任务的智能体提供可泛化的行为引导，在降低智能体配置门槛的同时提升任务完成质量。",
-      "exp.2.meta": "2026 年 2 月 — 5 月",
+      "exp.2.meta": "2026.2 — 2026.5",
       "exp.2.title": "算法实习生",
       "exp.2.org": "字节跳动 · TikTok 音乐计算",
       "exp.2.desc":
         "训练用于热点去重与内容—热点匹配的 Qwen3-Reranker-4B 模型。内容—热点匹配的精确率由 72% 提升至 88%、召回率由 87% 提升至 93%；热点去重的端到端批量延迟由 10 秒降至 6 秒以内。",
-      "exp.3.meta": "2025 年 4 月 — 9 月",
+      "exp.3.meta": "2025.4 — 2025.9",
       "exp.3.title": "工程实习生",
       "exp.3.org": "英特尔亚太研发 · Flex",
       "exp.3.desc":
@@ -136,17 +135,17 @@
       "edu.1.advisor": "指導教員：Xu Wang 研究員、Yang Wang 教授",
       "edu.2.title": "ソフトウェア工学 学士",
       "edu.2.org": "西安交通大学",
-      "exp.1.meta": "2026年6月 — 現在",
+      "exp.1.meta": "2026.6 — 現在",
       "exp.1.title": "研究インターン",
       "exp.1.org": "テンセント · TEG · インテリジェントアルゴリズム",
       "exp.1.desc":
         "多様なタスクにわたりエージェントへ汎化可能な行動指針を提供する「MetaAgent」を提案。エージェント設定のハードルを下げながら、タスク完了の質を向上させました。",
-      "exp.2.meta": "2026年2月 — 5月",
+      "exp.2.meta": "2026.2 — 2026.5",
       "exp.2.title": "アルゴリズムインターン",
       "exp.2.org": "ByteDance · TikTok Music Computing",
       "exp.2.desc":
         "トレンドの重複排除とコンテンツ・トレンドマッチングのため、Qwen3-Reranker-4Bモデルを学習。コンテンツ・トレンドマッチングでは適合率が72%から88%へ、再現率が87%から93%へ向上し、トレンド重複排除ではエンドツーエンドのバッチレイテンシを10秒から6秒未満に短縮しました。",
-      "exp.3.meta": "2025年4月 — 9月",
+      "exp.3.meta": "2025.4 — 2025.9",
       "exp.3.title": "エンジニアリングインターン",
       "exp.3.org": "Intel アジア太平洋R&D · Flex",
       "exp.3.desc":
@@ -190,17 +189,17 @@
       "edu.1.advisor": "지도교수: Xu Wang 연구원, Yang Wang 교수",
       "edu.2.title": "소프트웨어공학 학사",
       "edu.2.org": "시안교통대학교",
-      "exp.1.meta": "2026년 6월 — 현재",
+      "exp.1.meta": "2026.6 — 현재",
       "exp.1.title": "리서치 인턴",
       "exp.1.org": "텐센트 · TEG · 인텔리전트 알고리즘",
       "exp.1.desc":
         "다양한 태스크에서 에이전트에 일반화 가능한 행동 가이던스를 제공하는 MetaAgent를 제안했습니다. 에이전트 구성의 진입 장벽을 낮추면서 태스크 완수 품질을 높였습니다.",
-      "exp.2.meta": "2026년 2월 — 5월",
+      "exp.2.meta": "2026.2 — 2026.5",
       "exp.2.title": "알고리즘 인턴",
       "exp.2.org": "바이트댄스 · TikTok Music Computing",
       "exp.2.desc":
         "트렌딩 중복 제거와 콘텐츠-트렌딩 매칭을 위한 Qwen3-Reranker-4B 모델을 학습했습니다. 콘텐츠-트렌딩 매칭에서 정밀도는 72%에서 88%로, 재현율은 87%에서 93%로 향상되었고, 트렌딩 중복 제거의 엔드투엔드 배치 지연은 10초에서 6초 미만으로 감소했습니다.",
-      "exp.3.meta": "2025년 4월 — 9월",
+      "exp.3.meta": "2025.4 — 2025.9",
       "exp.3.title": "엔지니어링 인턴",
       "exp.3.org": "Intel 아시아태평양 R&D · Flex",
       "exp.3.desc":
@@ -215,10 +214,7 @@
     },
   };
 
-  var switcher = document.querySelector(".lang-switcher");
-  var langBtn = document.querySelector(".lang-btn");
-  var langMenu = document.querySelector(".lang-menu");
-  var langLabel = document.querySelector(".lang-current");
+  var langGroup = document.querySelector(".lang-group");
 
   // English source strings are captured from the markup on first switch,
   // so switching back to English always restores the exact original text.
@@ -236,9 +232,7 @@
 
     root.lang = HTML_LANGS[lang];
     document.title =
-      (dict && dict["page.title"]) ||
-      "Kai Wang — LLM Agent Researcher";
-    langLabel.textContent = LANG_LABELS[lang];
+      (dict && dict["page.title"]) || "Kai Wang — LLM Agent Researcher";
 
     if (toggle) {
       var t = (dict && dict["theme.toggle"]) || "Toggle color theme";
@@ -246,10 +240,10 @@
       toggle.setAttribute("title", t);
     }
 
-    langMenu.querySelectorAll("[data-lang]").forEach(function (li) {
-      li.setAttribute(
-        "aria-selected",
-        li.getAttribute("data-lang") === lang ? "true" : "false"
+    langGroup.querySelectorAll("[data-lang]").forEach(function (btn) {
+      btn.setAttribute(
+        "aria-pressed",
+        btn.getAttribute("data-lang") === lang ? "true" : "false"
       );
     });
 
@@ -260,35 +254,10 @@
     }
   }
 
-  function setMenu(open) {
-    langBtn.setAttribute("aria-expanded", String(open));
-    langMenu.hidden = !open;
-  }
-
-  if (switcher && langBtn && langMenu) {
-    langBtn.addEventListener("click", function () {
-      setMenu(langMenu.hidden);
-    });
-
-    langMenu.addEventListener("click", function (e) {
-      var li = e.target.closest("[data-lang]");
-      if (li) {
-        applyLang(li.getAttribute("data-lang"));
-        setMenu(false);
-      }
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!langMenu.hidden && !e.target.closest(".lang-switcher")) {
-        setMenu(false);
-      }
-    });
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !langMenu.hidden) {
-        setMenu(false);
-        langBtn.focus();
-      }
+  if (langGroup) {
+    langGroup.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-lang]");
+      if (btn) applyLang(btn.getAttribute("data-lang"));
     });
 
     var saved = null;
