@@ -41,7 +41,9 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--bg);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Yu Gothic", "Malgun Gothic",
+    "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   font-size: 16px;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
@@ -72,6 +74,11 @@ button:focus-visible {
   width: min(860px, 100%);
   margin: 0 auto;
   padding: 60px 28px 48px;
+}
+
+header {
+  position: relative;
+  z-index: 5;
 }
 
 /* ---------------------------------------------------------------------------
@@ -114,6 +121,82 @@ nav {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+/* Language switcher */
+.lang-switcher {
+  position: relative;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lang-btn:hover,
+.lang-btn[aria-expanded="true"] {
+  color: var(--accent);
+}
+
+.lang-caret {
+  width: 11px;
+  height: 11px;
+  transition: transform 0.25s ease;
+}
+
+.lang-btn[aria-expanded="true"] .lang-caret {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 20;
+  min-width: 128px;
+  margin: 0;
+  padding: 6px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 10px 32px rgb(0 0 0 / 10%);
+  list-style: none;
+}
+
+[data-theme="dark"] .lang-menu {
+  box-shadow: 0 10px 32px rgb(0 0 0 / 45%);
+}
+
+.lang-menu li {
+  padding: 7px 12px;
+  color: var(--body);
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.lang-menu li:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.lang-menu li[aria-selected="true"] {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* Theme toggle */
@@ -393,6 +476,19 @@ a.entry-title:hover {
   font-weight: 600;
 }
 
+.tag-oral {
+  display: inline-block;
+  margin-left: 9px;
+  padding: 1px 9px 2px;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+
 .entry-links {
   margin-top: 6px;
   font-size: 0.85rem;
@@ -442,7 +538,7 @@ a.entry-title:hover {
   content: "";
 }
 
-.compact-grid li span {
+.compact-grid li .award-year {
   display: block;
   color: var(--muted);
   font-size: 0.84rem;

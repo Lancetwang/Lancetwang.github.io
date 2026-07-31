@@ -61,8 +61,37 @@
           <a class="nav-name" href="#top">Kai Wang</a>
           <div class="nav-right">
             <div class="nav-menu">
-              <a href="#about">About</a>
-              <a href="#research">Research</a>
+              <a href="#about" data-i18n="nav.about">About</a>
+              <a href="#research" data-i18n="nav.research">Research</a>
+            </div>
+            <div class="lang-switcher">
+              <button
+                class="lang-btn"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Select language"
+              >
+                <span class="lang-current">EN</span>
+                <svg
+                  class="lang-caret"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <ul class="lang-menu" role="listbox" aria-label="Language" hidden>
+                <li role="option" data-lang="en" aria-selected="true">English</li>
+                <li role="option" data-lang="zh" aria-selected="false">中文</li>
+                <li role="option" data-lang="ja" aria-selected="false">日本語</li>
+                <li role="option" data-lang="ko" aria-selected="false">한국어</li>
+              </ul>
             </div>
             <button
               class="theme-toggle"
@@ -94,7 +123,7 @@
               >
                 <circle cx="12" cy="12" r="4" />
                 <path
-                  d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                  d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
                 />
               </svg>
             </button>
@@ -103,14 +132,14 @@
 
         <section class="hero" id="about">
           <h1 class="hero-name">Kai Wang</h1>
-          <p class="hero-role">LLM Agent Researcher</p>
-          <p class="hero-lede">
+          <p class="hero-role" data-i18n="hero.role">LLM Agent Researcher</p>
+          <p class="hero-lede" data-i18n="hero.lede">
             My research focuses on agent runtimes and harness engineering, with
             the goal of improving agents' ability to solve long-horizon tasks.
             I also conduct research on LLM post-training.
           </p>
           <ul class="hero-links" aria-label="Contact and profiles">
-            <li>China</li>
+            <li data-i18n="hero.location">China</li>
             <li><a href="mailto:zaizwk@gmail.com">zaizwk@gmail.com</a></li>
             <li><a href="tel:+8618027042742">+86 180 2704 2742</a></li>
             <li><a href="https://github.com/Lancetwang">GitHub</a></li>
@@ -120,25 +149,25 @@
 
       <main id="top">
         <section>
-          <h2 class="section-heading">Research Interests</h2>
+          <h2 class="section-heading" data-i18n="sec.interests">Research Interests</h2>
           <div class="focus-grid">
             <article>
-              <strong>Knowledge-Augmented LLMs</strong>
-              <p>
+              <strong data-i18n="focus.1.title">Knowledge-Augmented LLMs</strong>
+              <p data-i18n="focus.1.desc">
                 RAG, Graph-RAG, and agentic RAG — grounding language models
                 in external knowledge for real-world applications.
               </p>
             </article>
             <article>
-              <strong>Agent Systems</strong>
-              <p>
+              <strong data-i18n="focus.2.title">Agent Systems</strong>
+              <p data-i18n="focus.2.desc">
                 Designing core runtimes, harnesses, and workflows for
                 reliable tool use and long-horizon task execution.
               </p>
             </article>
             <article>
-              <strong>Self-Evolving Agents</strong>
-              <p>
+              <strong data-i18n="focus.3.title">Self-Evolving Agents</strong>
+              <p data-i18n="focus.3.desc">
                 Improving agents through tool synthesis, trajectory
                 rectification, harness training, and adaptive replanning.
               </p>
@@ -147,34 +176,42 @@
         </section>
 
         <section>
-          <h2 class="section-heading">Education</h2>
+          <h2 class="section-heading" data-i18n="sec.education">Education</h2>
           <ul class="entry-list">
             <li class="entry">
               <div class="entry-meta">2024 — 2027</div>
               <div class="entry-main">
-                <div class="entry-title">Master Student in Software Engineering</div>
-                <div class="entry-subtitle">
+                <div class="entry-title" data-i18n="edu.1.title">
+                  Master Student in Software Engineering
+                </div>
+                <div class="entry-subtitle" data-i18n="edu.1.org">
                   University of Science and Technology of China
                 </div>
-                <p>Advisor: Researcher Xu Wang, Prof. Yang Wang</p>
+                <p data-i18n="edu.1.advisor">
+                  Advisor: Researcher Xu Wang, Prof. Yang Wang
+                </p>
               </div>
             </li>
             <li class="entry">
               <div class="entry-meta">2020 — 2024</div>
               <div class="entry-main">
-                <div class="entry-title">BS Student in Software Engineering</div>
-                <div class="entry-subtitle">Xi'an Jiaotong University</div>
+                <div class="entry-title" data-i18n="edu.2.title">
+                  BS Student in Software Engineering
+                </div>
+                <div class="entry-subtitle" data-i18n="edu.2.org">
+                  Xi'an Jiaotong University
+                </div>
               </div>
             </li>
           </ul>
         </section>
 
         <section>
-          <h2 class="section-heading">Industry Experience</h2>
+          <h2 class="section-heading" data-i18n="sec.experience">Industry Experience</h2>
           <ul class="entry-list">
             <li class="entry">
               <div class="entry-meta">
-                Jun 2026 — Present
+                <span data-i18n="exp.1.meta">Jun 2026 — Present</span>
                 <img
                   class="company-logo"
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Tencent_logo_2017.svg"
@@ -184,11 +221,11 @@
                 />
               </div>
               <div class="entry-main">
-                <div class="entry-title">Research Intern</div>
-                <div class="entry-subtitle">
+                <div class="entry-title" data-i18n="exp.1.title">Research Intern</div>
+                <div class="entry-subtitle" data-i18n="exp.1.org">
                   Tencent · TEG · Intelligent Algorithms
                 </div>
-                <p>
+                <p data-i18n="exp.1.desc">
                   Proposed MetaAgent, which provides generalizable behavioral
                   guidance for agents across diverse tasks. It lowers the
                   barrier to configuring agents while improving task-completion
@@ -198,7 +235,7 @@
             </li>
             <li class="entry">
               <div class="entry-meta">
-                Feb — May 2026
+                <span data-i18n="exp.2.meta">Feb — May 2026</span>
                 <img
                   class="company-logo"
                   src="https://upload.wikimedia.org/wikipedia/commons/0/07/ByteDance_logo_English.svg"
@@ -208,13 +245,13 @@
                 />
               </div>
               <div class="entry-main">
-                <div class="entry-title">Algorithm Intern</div>
-                <div class="entry-subtitle">
+                <div class="entry-title" data-i18n="exp.2.title">Algorithm Intern</div>
+                <div class="entry-subtitle" data-i18n="exp.2.org">
                   ByteDance · TikTok Music Computing
                 </div>
-                <p>
-                  Trained Qwen3-Reranker-4B models for trending deduplication and
-                  content-to-trending matching. For content-to-trending
+                <p data-i18n="exp.2.desc">
+                  Trained Qwen3-Reranker-4B models for trending deduplication
+                  and content-to-trending matching. For content-to-trending
                   matching, precision increased from 72% to 88% and recall from
                   87% to 93%; for trending deduplication, end-to-end batch
                   latency decreased from 10s to under 6s.
@@ -223,7 +260,7 @@
             </li>
             <li class="entry">
               <div class="entry-meta">
-                Apr — Sep 2025
+                <span data-i18n="exp.3.meta">Apr — Sep 2025</span>
                 <img
                   class="company-logo company-logo-intel"
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Intel_logo_%282020%2C_dark_blue%29.svg"
@@ -233,9 +270,11 @@
                 />
               </div>
               <div class="entry-main">
-                <div class="entry-title">Engineering Intern</div>
-                <div class="entry-subtitle">Intel Asia-Pacific R&amp;D · Flex</div>
-                <p>
+                <div class="entry-title" data-i18n="exp.3.title">Engineering Intern</div>
+                <div class="entry-subtitle" data-i18n="exp.3.org">
+                  Intel Asia-Pacific R&amp;D · Flex
+                </div>
+                <p data-i18n="exp.3.desc">
                   Simplified EduLamp from a multi-agent architecture to a
                   single agent with agents-as-tools, reducing first-token
                   latency from 5s to under 2s. Introduced MCP-based plugins for
@@ -248,7 +287,7 @@
         </section>
 
         <section id="research">
-          <h2 class="section-heading">Publications</h2>
+          <h2 class="section-heading" data-i18n="sec.publications">Publications</h2>
           <ul class="entry-list">
             <li class="entry">
               <div class="entry-meta">2026</div>
@@ -265,10 +304,14 @@
                 </div>
                 <div class="entry-tag">Findings of ACL 2026</div>
                 <div class="entry-links">
-                  <a href="https://aclanthology.org/2026.findings-acl.869.pdf"
+                  <a
+                    href="https://aclanthology.org/2026.findings-acl.869.pdf"
+                    data-i18n="link.paper"
                     >[Paper]</a
                   >
-                  <a href="https://github.com/Lancetwang/car">[Code]</a>
+                  <a href="https://github.com/Lancetwang/car" data-i18n="link.code"
+                    >[Code]</a
+                  >
                 </div>
               </div>
             </li>
@@ -287,9 +330,15 @@
                   Yudong Zhang, Xu Wang, Xuan Yu, Zhaoyang Sun, Kai Wang, Yang
                   Wang
                 </div>
-                <div class="entry-tag">AAAI 2025</div>
+                <div class="entry-tag">
+                  AAAI 2025<span class="tag-oral">Oral</span>
+                </div>
                 <div class="entry-links">
-                  <a href="https://doi.org/10.1609/aaai.v39i1.32102">[Paper]</a>
+                  <a
+                    href="https://doi.org/10.1609/aaai.v39i1.32102"
+                    data-i18n="link.paper"
+                    >[Paper]</a
+                  >
                 </div>
               </div>
             </li>
@@ -297,7 +346,7 @@
         </section>
 
         <section>
-          <h2 class="section-heading">Open Source Projects</h2>
+          <h2 class="section-heading" data-i18n="sec.projects">Open Source Projects</h2>
           <ul class="entry-list">
             <li class="entry">
               <div class="entry-meta">2026</div>
@@ -308,7 +357,7 @@
                 >
                   Agent Core Runtime
                 </a>
-                <div class="entry-subtitle">
+                <div class="entry-subtitle" data-i18n="proj.1.desc">
                   Lightweight node-flow runtime for building tool-using agents.
                 </div>
                 <div class="entry-links">
@@ -327,7 +376,7 @@
                 >
                   Friday
                 </a>
-                <div class="entry-subtitle">
+                <div class="entry-subtitle" data-i18n="proj.2.desc">
                   A personal CLI agent built on Agent Core Runtime.
                 </div>
                 <div class="entry-links">
@@ -340,21 +389,25 @@
 
         <div class="compact-grid">
           <section>
-            <h2 class="section-heading">Awards</h2>
+            <h2 class="section-heading" data-i18n="sec.awards">Awards</h2>
             <ul>
               <li>
-                First-Class Scholarship, University of Science and Technology
-                of China
-                <span>2024</span>
+                <span class="award-name" data-i18n="award.1"
+                  >First-Class Scholarship, University of Science and
+                  Technology of China</span
+                >
+                <span class="award-year">2024</span>
               </li>
               <li>
-                National Encouragement Scholarship
-                <span>2021 · 2022 · 2023</span>
+                <span class="award-name" data-i18n="award.2"
+                  >National Encouragement Scholarship</span
+                >
+                <span class="award-year">2021 · 2022 · 2023</span>
               </li>
             </ul>
           </section>
           <section>
-            <h2 class="section-heading">Links</h2>
+            <h2 class="section-heading" data-i18n="sec.links">Links</h2>
             <ul>
               <li>
                 <a
@@ -375,7 +428,7 @@
 
       <footer>
         <span>© 2026 Kai Wang</span>
-        <span>Last updated: July 2026</span>
+        <span data-i18n="footer.updated">Last updated: July 2026</span>
       </footer>
     </div>
   </body>
