@@ -84,7 +84,8 @@ html:not([lang="en"]) .hero-role {
   letter-spacing: 0.1em;
 }
 
-html:not([lang="en"]) .nav-menu a {
+html:not([lang="en"]) .nav-menu a,
+html:not([lang="en"]) .lang-group button {
   letter-spacing: 0.06em;
 }
 
@@ -116,7 +117,7 @@ header {
 --------------------------------------------------------------------------- */
 nav {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
@@ -137,7 +138,7 @@ nav {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 24px;
 }
 
 .nav-menu {
@@ -145,7 +146,8 @@ nav {
   gap: 24px;
 }
 
-.nav-menu a {
+.nav-menu a,
+.lang-group button {
   color: var(--muted);
   font-size: 0.76rem;
   font-weight: 600;
@@ -153,35 +155,19 @@ nav {
   text-transform: uppercase;
 }
 
-/* Language group: flat text buttons with the same underline motion as nav */
+/* Language group: same type scale and rhythm as the nav menu */
 .lang-group {
   display: flex;
   align-items: baseline;
-  gap: 13px;
+  gap: 24px;
 }
 
 .lang-group button {
   padding: 0 0 2px;
-  color: var(--muted);
   font-family: inherit;
-  font-size: 0.76rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  background: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: 0 1px;
+  background-color: transparent;
   border: 0;
   cursor: pointer;
-  transition:
-    background-size 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-    color 0.2s ease;
-}
-
-.lang-group button:hover {
-  color: var(--accent);
-  background-size: 100% 1px;
 }
 
 .lang-group button[aria-pressed="true"] {
@@ -189,27 +175,22 @@ nav {
   background-size: 100% 1px;
 }
 
-/* Theme toggle */
+/* Theme toggle: bare icon, sits on the same line as the text nav */
 .theme-toggle {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
   color: var(--muted);
   background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 50%;
+  border: 0;
   cursor: pointer;
   transition:
     color 0.25s ease,
-    border-color 0.25s ease,
     transform 0.25s ease;
 }
 
 .theme-toggle:hover {
   color: var(--accent);
-  border-color: var(--accent);
   transform: rotate(15deg);
 }
 
@@ -288,6 +269,7 @@ nav {
 /* Animated underline for inline links */
 .hero-links a,
 .nav-menu a,
+.lang-group button,
 .entry-links a,
 .compact-grid a {
   padding-bottom: 2px;
@@ -302,6 +284,7 @@ nav {
 
 .hero-links a:hover,
 .nav-menu a:hover,
+.lang-group button:hover,
 .entry-links a:hover,
 .compact-grid a:hover {
   color: var(--accent);
@@ -466,6 +449,11 @@ a.entry-title:hover {
   font-weight: 600;
 }
 
+.entry-tag .tag-note {
+  color: var(--muted);
+  font-weight: 500;
+}
+
 .entry-links {
   margin-top: 6px;
   font-size: 0.85rem;
@@ -567,7 +555,13 @@ footer {
     gap: 12px 18px;
   }
 
-  .nav-menu {
+  .nav-right {
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+
+  .nav-menu,
+  .lang-group {
     gap: 18px;
   }
 
