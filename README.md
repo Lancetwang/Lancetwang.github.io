@@ -1,3 +1,3 @@
 # lancetwang.github.io
 
-Personal homepage for [王凯](https://github.com/Lancetwang).
+Personal homepage for [Lancet Wang](https://github.com/Lancetwang).

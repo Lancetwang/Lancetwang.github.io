@@ -53,7 +53,7 @@
   var I18N = {
     en: null, // English is the source markup; no dictionary needed
     zh: {
-      "page.title": "Kai Wang — LLM 智能体研究者",
+      "page.title": "Lancet Wang — LLM 智能体研究者",
       "theme.toggle": "切换深浅色主题",
       "nav.about": "关于",
       "nav.research": "研究",
@@ -106,7 +106,7 @@
       "footer.updated": "最后更新：2026 年 7 月",
     },
     ja: {
-      "page.title": "Kai Wang — LLMエージェント研究者",
+      "page.title": "Lancet Wang — LLMエージェント研究者",
       "theme.toggle": "テーマを切り替え",
       "nav.about": "概要",
       "nav.research": "研究",
@@ -160,7 +160,7 @@
       "footer.updated": "最終更新：2026年7月",
     },
     ko: {
-      "page.title": "Kai Wang — LLM 에이전트 연구원",
+      "page.title": "Lancet Wang — LLM 에이전트 연구원",
       "theme.toggle": "테마 전환",
       "nav.about": "소개",
       "nav.research": "연구",
@@ -232,7 +232,7 @@
 
     root.lang = HTML_LANGS[lang];
     document.title =
-      (dict && dict["page.title"]) || "Kai Wang — LLM Agent Researcher";
+      (dict && dict["page.title"]) || "Lancet Wang — LLM Agent Researcher";
 
     if (toggle) {
       var t = (dict && dict["theme.toggle"]) || "Toggle color theme";
